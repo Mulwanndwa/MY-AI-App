@@ -1,0 +1,85 @@
+<svg width="222.000000" height="36.957520" viewBox="0 0 222 36.9575" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs/>
+	<g style="mix-blend-mode:normal">
+		<rect id="Rectangle 1" x="90.824951" width="40.350758" height="10.069654" fill="#DA2128" fill-opacity="1.000000"/>
+	</g>
+	<g style="mix-blend-mode:normal">
+		<rect id="Rectangle 2" x="90.824951" y="26.852051" width="40.350758" height="10.069654" fill="#DA2128" fill-opacity="1.000000"/>
+	</g>
+	<g style="mix-blend-mode:normal">
+		<rect id="Rectangle 3" x="90.824951" y="13.425537" width="30.707012" height="10.069654" fill="#DA2128" fill-opacity="1.000000"/>
+	</g>
+	<mask id="mask1_1864" mask-type="alpha" maskUnits="userSpaceOnUse" x="0.000000" y="0.000000" width="222.000000" height="36.957520">
+		<g style="mix-blend-mode:normal">
+			<rect id="Rectangle 9" width="222.000000" height="36.957409" fill="#C4C4C4" fill-opacity="1.000000"/>
+		</g>
+	</mask>
+	<g mask="url(#mask1_1864)">
+		<g style="mix-blend-mode:normal">
+			<path id="Path 1" d="M46.92 26.85L46.92 36.92L74.05 36.92C79.96 36.92 84.85 32.54 85.64 26.85L46.92 26.85Z" fill="#DA2128" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+	</g>
+	<g mask="url(#mask1_1864)">
+		<g style="mix-blend-mode:normal">
+			<path id="Path 2" d="M74.05 13.42L45.52 13.42C46.32 19.11 51.21 23.49 57.11 23.49L85.64 23.49C84.84 17.8 79.96 13.42 74.05 13.42Z" fill="#DA2128" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+	</g>
+	<g mask="url(#mask1_1864)">
+		<g style="mix-blend-mode:normal">
+			<path id="Path 3" d="M57.11 -0.01C51.2 -0.01 46.32 4.37 45.52 10.06L84.24 10.06L84.24 -0.01L57.11 -0.01Z" fill="#DA2128" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+	</g>
+	<g mask="url(#mask1_1864)">
+		<g style="mix-blend-mode:normal">
+			<path id="Path 4" d="M211.94 -0.01L191.71 -0.01C186.15 -0.01 181.64 4.5 181.64 10.06L222 10.06C222 4.5 217.49 -0.01 211.94 -0.01Z" fill="#DA2128" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+	</g>
+	<g mask="url(#mask1_1864)">
+		<g style="mix-blend-mode:normal">
+			<rect id="Rectangle 4" x="181.663086" y="13.426270" width="10.448620" height="10.105290" fill="#DA2128" fill-opacity="1.000000"/>
+		</g>
+	</g>
+	<g mask="url(#mask1_1864)">
+		<g style="mix-blend-mode:normal">
+			<rect id="Rectangle 5" x="211.551270" y="13.426270" width="10.448620" height="10.105290" fill="#DA2128" fill-opacity="1.000000"/>
+		</g>
+	</g>
+	<g mask="url(#mask1_1864)">
+		<g style="mix-blend-mode:normal">
+			<path id="Path 5" d="M181.64 26.85C181.64 32.41 186.15 36.92 191.7 36.92L211.94 36.92C217.49 36.92 222 32.41 222 26.85L181.64 26.85Z" fill="#DA2128" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+	</g>
+	<g mask="url(#mask1_1864)">
+		<g style="mix-blend-mode:normal">
+			<rect id="Rectangle 6" width="40.350758" height="10.069653" fill="#DA2128" fill-opacity="1.000000"/>
+		</g>
+	</g>
+	<g mask="url(#mask1_1864)">
+		<g style="mix-blend-mode:normal">
+			<rect id="Rectangle 7" x="14.951172" y="26.852051" width="10.448623" height="10.105290" fill="#DA2128" fill-opacity="1.000000"/>
+		</g>
+	</g>
+	<g mask="url(#mask1_1864)">
+		<g style="mix-blend-mode:normal">
+			<rect id="Rectangle 8" x="14.951172" y="13.408203" width="10.448623" height="10.105290" fill="#DA2128" fill-opacity="1.000000"/>
+		</g>
+	</g>
+	<g mask="url(#mask1_1864)">
+		<g style="mix-blend-mode:normal">
+			<path id="Path 6" d="M167.4 0.01L136.23 0.01L136.23 10.08L176.54 10.08C176.57 9.79 176.58 9.5 176.58 9.19C176.58 4.12 172.47 0.01 167.4 0.01Z" fill="#DA2128" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+	</g>
+	<g mask="url(#mask1_1864)">
+		<g style="mix-blend-mode:normal">
+			<path id="Path 7" d="M176.58 27.74C176.58 27.44 176.57 27.15 176.54 26.87L136.23 26.87L136.23 36.94L167.4 36.94C172.47 36.93 176.58 32.81 176.58 27.74Z" fill="#DA2128" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+	</g>
+	<g mask="url(#mask1_1864)">
+		<g style="mix-blend-mode:normal">
+			<path id="Path 8" d="M169.56 18.72C169.44 18.7 169.36 18.59 169.36 18.46C169.36 18.33 169.45 18.23 169.56 18.2C172.19 17.56 174.38 15.79 175.58 13.44L136.23 13.44L136.23 23.51L175.59 23.51C174.39 21.14 172.2 19.36 169.56 18.72Z" fill="#DA2128" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+	</g>
+</svg>

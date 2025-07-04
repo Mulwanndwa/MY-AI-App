@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en" class="color-theme-white">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#ffff">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+    <title></title>
+
+    <link rel="stylesheet" href="css/framework7.bundle.min.css?v=6.0.8">
+<!--     <link rel="stylesheet" href="css/app.css?v=6.0.8"> -->
+
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="apple-touch-icon" href="img/gomobileux-icon-square.ico">
+    <link rel="icon" id="fav" href="">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/alertify.css">
+    
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+
+</head>
+
+<body>
+        
+    <div  id="app">
+        <!-- Statusbar overlay element -->
+        <div class="statusbar"></div>
+      
+
+        <div  class="view view-main view-init safe-areas" data-master-detail-breakpoint="800" data-url="/" id="myApp">
+
+            
+           
+            <div class="panel panel-left panel-reveal panel-resizable panel-init color-white">
+                <div class="page " >
+                    <div class="left-panel">
+                      
+                            <div class="text-align-center" >
+                                <div class="figure-menu shadow">
+                                    <figure class="panel-close">
+                                            <img src="img/user.png" alt="">
+                                    </figure>
+                                </div> 
+                            </div>
+
+                            <br>
+                        <div class="block-title caps color-white version" style="color:var(--f7-skeleton-color) !important">Version : 6.0.8</div>
+
+                        <div id="left-panel" class="list links-list nav-list" >
+                            <ul>
+                                <li>
+                                    <a   class="panel-close">
+                                        <figure class="avatar avatar-30"> <i class="fa fa-home"></i></figure> &nbsp;&nbsp;Home
+                                    </a>
+                                </li>
+
+                               
+                                <li>
+                                    <a   class="panel-close">
+                                            <figure class="avatar avatar-30"><i class="fa fa-lock" aria-hidden="true"></i></figure> &nbsp;&nbsp;Logout
+                                    </a>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+
+    
+            <div class="page page-homepage bg-white light" data-name="homepage">
+                <div class="navbar " style="background:#ebece5 !important">
+                    <div class="navbar-inner homepage-nav" style="background:#ebece5 !important">
+                        <div class="left">
+                           <img src="img/logo.png" style="height: 80px;">
+                        </div>
+                        <div class="title ">
+                             Mulwanndwa's Open AI
+                        </div>
+                        <div class="right parent" style="height: 40px;">
+                          
+                         </div>
+                    </div>
+                </div>
+                <div class="toolbar toolbar-bottom" style="height: 100px;" >
+                  <div class="toolbar-inner" style="height: 100px;">
+                        <div class="link" style="width:80%">
+                             <div class="item-input-wrap">
+                              <input type="text" name="name" placeholder="Ask anything" style="height: 50px; text-align: left !important; padding:.3em" v-model="ai_input"/>
+                             <!--  <span class="input-clear-button"></span> -->
+                            </div>
+                        </div>
+                         <div class="link">
+                            <button class="button button-fill" v-on:click="get_response()">
+                                <!-- <i class="fa fa-paper-plane fa-2x" aria-hidden="true" style="color:black !important;"></i>  -->Submit
+                            </button>
+                         </div>
+                  </div>
+                </div>
+                <div class="page-content">
+                    <div class="block-title">Ask anything</div>
+                        <div class="list list-strong-ios list-dividers-ios inset-ios">
+                            <ul>
+                                <li class="item-content item-input">
+                                    <div v-html="response" style="height:100vh; overflow: auto;"></div>
+                                </li>
+                            </ul>
+                        </div>
+
+                  </div>
+
+              </div>
+          </div>
+
+
+         </div>
+      </div>
+
+
+  </body>
+
+     <script src="js/vue.js"></script>
+     <script src="js/framework7.bundle.js"></script>
+     <script src="js/chartjs/Chart.min.js"></script>
+     <script src="js/chartjs/utils.js"></script>
+     <script src="js/routes.js"></script>
+
+     <script src="js/api_config.js?6.0.8"></script>
+     <script src="js/config.js?6.0.8"></script>
+     <script src="js/app.js?6.0.8"></script>
+     <script type="text/javascript" src="js/jquery.min.js"></script>
+     <script src="js/moment.min.js"></script>
+     <script src="js/main.js?6.0.8"></script>
+
+     <script type="text/javascript" src="js/signature_pad.js"></script>
+     <script src="js/custom.js"></script>
+     <script type="text/javascript" src="cordova.js"></script>
+     <script src="js/card.js"></script>
+     <script type="text/javascript" src="js/alertify.min.js"></script>
+     <script src="js/jquery.smartbanner.js"></script>
+    
+     <script>
+        //window.onbeforeunload = function() { return "Your work will be lost."; };
+         
+        history.pushState(null, null, location.href);
+        history.back();
+        history.forward();
+        window.onpopstate = function () {
+          
+             history.go(1);
+             // if(myApp.page != '' && myApp.page != 'login' && myApp.page != 'homepage' && myApp.page != 'register'){
+             //    myApp.goBack()
+             // }
+             
+        }
+     </script>
+</html>
+
+
