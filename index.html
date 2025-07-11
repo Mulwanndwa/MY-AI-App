@@ -98,12 +98,13 @@
                   <div class="toolbar-inner" style="height: 100px;">
                         <div class="link" style="width:80%">
                              <div class="item-input-wrap">
-                              <input type="text" name="name" placeholder="How can I help you today?" style="height: 50px; text-align: left !important; padding:.3em" v-model="ai_input"/>
+                              <textarea placeholder="How can I help you today?" style="height: 50px; text-align: left !important; padding:.3em" v-model="ai_input">
+                                </textarea>
                              <!--  <span class="input-clear-button"></span> -->
                             </div>
                         </div>
                          <div class="link">
-                            <button class="button button-fill" v-on:click="get_response()">
+                            <button class="button button-fill" v-on:click="get_response()" style="width:120px;height: 50px;" :disabled="loading">
                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Submit
                             </button>
                          </div>
@@ -114,10 +115,14 @@
                         <div class="list margin list-strong-ios list-dividers-ios inset-ios">
                             <ul>
                                 <li class="accordion-item">
+                                    <small>Every donation, big or small, helps us move closer to our mission</small>
+                                </li>
+
+                                <li class="accordion-item" style="padding-top:.5em; padding-bottom: .5em;">
                                     <a href="" class="item-link item-content button" style="background: #0951a2 !important;">
                                         <div class="item-inner">
                                              <div style="width: 120px;color: #fff !important;">
-                                                <i class="fa fa-paypal" aria-hidden="true"></i> Donate
+                                                <i class="fa fa-paypal" aria-hidden="true"></i> Donate Any Amount
                                             </div>
                                          </div>
 
@@ -152,6 +157,9 @@
                                             </a>
                                         </div>
                                     </div>
+                                </li>
+                                <li class="item-content item-input response" v-if="loading" style="padding-top: 1em; text-align: center;justify-content: center;">
+                                    <img src="img/loader.svg">
                                 </li>
                                 <li class="item-content item-input response" style="padding-top: 1em;">
                                     

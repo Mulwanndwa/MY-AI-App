@@ -32,27 +32,30 @@ var myApp = new Vue({
             console.log("getting response")
              myApp.question = myApp.ai_input
              myApp.response = ""
+             myApp.loading = true
            cordova.plugins.emiOpenAiPlugin.chat(   
                 apiKey = "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",  // apiKey https://platform.openai.com/
                 timeOut = 60, //set this to 60, If error Failed to load response due to timeout
                 role = "user", // The role of the author of this message. One of system, user, or assistant.
-                content = myApp.ai_input+", Response in html",
+                content = myApp.ai_input+". Response in html",
                 function(result){
                     console.log(result) 
                     myApp.response = result
-                    app.dialog.close()
+                   myApp.loading = false
+                   myApp.ai_input = ""
                 },
                function(error){ 
                     console.log(error)
                      myApp.response = error
-                     app.dialog.close()
+                    myApp.loading = false
+                    myApp.ai_input = ""
                 
             });
-           app.dialog.preloader("wait...")
+           // app.dialog.preloader("wait...")
            setTimeout(function(){
-            
-            myApp.ai_input = ""
-           },2000)
+            //myApp.loading = false
+            //myApp.ai_input = ""
+           },5000)
             //  cordova.plugins.emiOpenAiPlugin.completions(  
             //     apiKey = "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",
             //     timeOut = 60, //set this to 60, If error Failed to load response due to timeout

@@ -1,5 +1,6 @@
 config = {
     response: "",
     ai_input:"",
-    mode:""
+    mode:"",
+    loading:false
 }
