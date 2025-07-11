@@ -81,13 +81,16 @@
                 <div class="navbar " style="background:#ebece5 !important">
                     <div class="navbar-inner homepage-nav" style="background:#ebece5 !important">
                         <div class="left">
-                           <img src="img/logo.png" style="height: 80px;">
+                           <img v-if="mode != 'donate'" src="img/logo.png" style="height: 80px;">
+                            <a  v-if="mode == 'donate'" href="#" class="link back icon-only text-blue back" v-on:click="mode == ''">
+                                <span class="fa fa-chevron-left "></span>
+                            </a>
                         </div>
                         <div class="title ">
-                             Mulwanndwa's Open AI
+                             Mulwa Open AI
                         </div>
                         <div class="right parent" style="height: 40px;">
-                          
+                            
                          </div>
                     </div>
                 </div>
@@ -95,25 +98,68 @@
                   <div class="toolbar-inner" style="height: 100px;">
                         <div class="link" style="width:80%">
                              <div class="item-input-wrap">
-                              <input type="text" name="name" placeholder="Ask anything" style="height: 50px; text-align: left !important; padding:.3em" v-model="ai_input"/>
+                              <input type="text" name="name" placeholder="How can I help you today?" style="height: 50px; text-align: left !important; padding:.3em" v-model="ai_input"/>
                              <!--  <span class="input-clear-button"></span> -->
                             </div>
                         </div>
                          <div class="link">
                             <button class="button button-fill" v-on:click="get_response()">
-                                <!-- <i class="fa fa-paper-plane fa-2x" aria-hidden="true" style="color:black !important;"></i>  -->Submit
+                               <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Submit
                             </button>
                          </div>
                   </div>
                 </div>
                 <div class="page-content">
-                    <div class="block-title">Ask anything</div>
-                        <div class="list list-strong-ios list-dividers-ios inset-ios">
+                    
+                        <div class="list margin list-strong-ios list-dividers-ios inset-ios">
                             <ul>
-                                <li class="item-content item-input">
+                                <li class="accordion-item">
+                                    <a href="" class="item-link item-content button" style="background: #0951a2 !important;">
+                                        <div class="item-inner">
+                                             <div style="width: 120px;color: #fff !important;">
+                                                <i class="fa fa-paypal" aria-hidden="true"></i> Donate
+                                            </div>
+                                         </div>
+
+                                     </a>
+                                    <div class="accordion-item-content">
+                                        <div id="paypal-button-container"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                      
+                            <div class="row" style="justify-content: flex-start;">
+                                <div class="col-100">
+                                    <div class="block-title ">Hi, how can I help you today?</div>
+                                <div>
+                                <!-- <div class="col-20">
+                                     <button class="button button-fill" v-on:click="mode = 'donate'">
+                                      <i class="fa fa-paypal" aria-hidden="true"></i>  Donate
+                                    </button>
+                                </div> -->
+                            </div>
+                    
+                           
+                            <ul>
+                                <li v-if="response" style="border-bottom: solid thin #ddd;">
+                                    <div class="row" style="width: 100%;">
+                                        <div class="col-60" >
+                                           <span class="badge" style="padding: 1.5em; width:100%; ">{{question}}</span> 
+                                        </div>
+                                        <div class="col-40">
+                                            <a class="button" v-on:click="downloadResponse()">
+                                                <i class="fa fa-download"  style="color:#da5347" aria-hidden="true"></i> Download
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content item-input response" style="padding-top: 1em;">
+                                    
                                     <div v-html="response" style="height:100vh; overflow: auto;"></div>
                                 </li>
                             </ul>
+
+                            
                         </div>
 
                   </div>
@@ -128,7 +174,7 @@
 
   </body>
 
-     <script src="js/vue.js"></script>
+      <script src="js/vue.js"></script>
      <script src="js/framework7.bundle.js"></script>
      <script src="js/chartjs/Chart.min.js"></script>
      <script src="js/chartjs/utils.js"></script>
@@ -147,7 +193,9 @@
      <script src="js/card.js"></script>
      <script type="text/javascript" src="js/alertify.min.js"></script>
      <script src="js/jquery.smartbanner.js"></script>
-    
+     
+    <script src="https://www.paypal.com/sdk/js?client-id=AXIKqb37YeSykr3eYpl5AQe6TXW4NYzXGCmPMn7bAuxlW8Keaz6aOOtwJUYiwIT83Sywg5kxnxd0oaYE&components=buttons,marks,card-fields,funding-eligibility,messages"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
      <script>
         //window.onbeforeunload = function() { return "Your work will be lost."; };
          

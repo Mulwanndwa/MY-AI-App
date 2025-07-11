@@ -2342,12 +2342,12 @@ h3{
   }
   .dialog-preloader{
       background: transparent !important;
-      color: #fff !important;
+      /*color: #fff !important;*/
       box-shadow: unset !important 
   }
 
   .dialog-preloader .dialog-title{
-    color: #fff !important;
+    /*color: #fff !important;*/
   }
 
   .actions-backdrop, .custom-modal-backdrop, .dialog-backdrop, .popover-backdrop, .popup-backdrop, .preloader-backdrop, .sheet-backdrop {

@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 document.addEventListener("deviceready", onAppReady , false);
 function onAppReady(){
-  
+  paypal.Buttons().render('#paypal-button-container');
 }
 
 
