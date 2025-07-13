@@ -23,7 +23,7 @@ var myApp = new Vue({
             popupSwipe.open()
             paypal.Buttons().render('#paypal-button-container');
         },
-        scanForResult: function(){
+        shareToEmail: function(){
             cordova.plugins.email.open({
                 to:      '',
                 cc:      '',
