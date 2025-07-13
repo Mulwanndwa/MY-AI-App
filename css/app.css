@@ -2547,7 +2547,7 @@ button {
 }
 .navbar-inner .fa {
     /* background: #fff !important; */
-    /* color: #fff !important */
+     color: lightblue !important 
 }
 .navbar-inner .fa-bars{
     font-size: 1.3em;

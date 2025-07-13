@@ -89,13 +89,18 @@
                         <div class="title ">
                              Mulwa Open AI
                         </div>
-                        <div class="right parent" style="height: 40px;">
-                            
+                        <div class="right parent" style="height: 40px; width: 100px; padding-right: .3em;">
+                            <i class="fa fa-share-alt fa-2x" aria-hidden="true" style="margin-right: .8em;"></i>
+
+                            <i class="fa fa-download fa-2x" v-on:click="downloadResponse()" aria-hidden="true"></i>
                          </div>
                     </div>
                 </div>
                 <div class="toolbar toolbar-bottom" style="height: 100px;" >
                   <div class="toolbar-inner" style="height: 100px;">
+                        <div class="link" v-on:click="scanForResult()">
+                            <i class="fa fa-qrcode fa-2x" aria-hidden="true"></i>
+                        </div>
                         <div class="link" style="width:80%">
                              <div class="item-input-wrap">
                               <textarea placeholder="How can I help you today?" style="height: 50px; text-align: left !important; padding:.3em" v-model="ai_input">
@@ -103,10 +108,11 @@
                              <!--  <span class="input-clear-button"></span> -->
                             </div>
                         </div>
-                         <div class="link">
-                            <button class="button button-fill" v-on:click="get_response()" style="width:120px;height: 50px;" :disabled="loading">
+                         <div class="link" v-on:click="get_response()">
+                            <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+                          <!--   <button class="button button-fill"  v-on:click="get_response()" style="width:120px;height: 50px;" :disabled="loading">
                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Submit
-                            </button>
+                            </button> -->
                          </div>
                   </div>
                 </div>
@@ -118,18 +124,8 @@
                                     <small>Every donation, big or small, helps us move closer to our mission</small>
                                 </li>
 
-                                <li class="accordion-item" style="padding-top:.5em; padding-bottom: .5em;">
-                                    <a href="" class="item-link item-content button" style="background: #0951a2 !important;">
-                                        <div class="item-inner">
-                                             <div style="width: 120px;color: #fff !important;">
-                                                <i class="fa fa-paypal" aria-hidden="true"></i> Donate Any Amount
-                                            </div>
-                                         </div>
-
-                                     </a>
-                                    <div class="accordion-item-content">
-                                        <div id="paypal-button-container"></div>
-                                    </div>
+                                <li  style="padding-top:.5em; padding-bottom: .5em;">
+                                    <button class="button" v-on:click="donate()" style="background:#ffc439 ">Donate</button>
                                 </li>
                             </ul>
                       
@@ -148,14 +144,14 @@
                             <ul>
                                 <li v-if="response" style="border-bottom: solid thin #ddd;">
                                     <div class="row" style="width: 100%;">
-                                        <div class="col-60" >
+                                        <div class="col-100" >
                                            <span class="badge" style="padding: 1.5em; width:100%; ">{{question}}</span> 
                                         </div>
-                                        <div class="col-40">
+                                       <!--  <div class="col-40">
                                             <a class="button" v-on:click="downloadResponse()">
                                                 <i class="fa fa-download"  style="color:#da5347" aria-hidden="true"></i> Download
                                             </a>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </li>
                                 <li class="item-content item-input response" v-if="loading" style="padding-top: 1em; text-align: center;justify-content: center;">
@@ -174,6 +170,36 @@
 
               </div>
           </div>
+
+
+
+          <div class="popup paypal-popup">
+              <div class="view">
+                <div class="page">
+                  <div class="navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner">
+                      <div class="title">Donate</div>
+                      <div class="right" style="width: 40px !important;">
+                        <!-- Link to close popup -->
+                        <a class="link popup-close" >
+                            <i class="fa fa-times-circle fa-2x" aria-hidden="true" style="font-size: 2em; color:gray"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="page-content">
+                        <div class="block margin" style="top: 2em !important;">
+                            <div id="paypal-button-container"></div>
+                        </div>
+                         
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+
+
 
 
          </div>

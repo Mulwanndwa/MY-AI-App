@@ -22289,7 +22289,10 @@ iframe#viAd {
         text-align: justify;
         text-transform: capitalize;
      }
-
+.fa-2x {
+    font-size: 2em;
+    color: darkslategray !important;
+}
      .button{
         background: #29788b !important;
         color: #fff;
